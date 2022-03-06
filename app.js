@@ -34,10 +34,12 @@ app.post("/", function(req, res) {
   const jsonData = JSON.stringify(data);
 
   const url = "https://us20.api.mailchimp.com/3.0/lists/53e89a9663"
+  // i realized that we should not post the api key on github so mailchimp has deactivated this token. I still keep it here to remind myself.
 
   const options = {
   method: "POST",
   auth: "reuben1:dc9575f835524b74ec45c6082b2cf193-us20"
+    // this is not accessible as well. DON'T make this mistake again. Research API key storage MDN GITHUB Docs.
   }
 
   const request = https.request(url, options, function(response){
